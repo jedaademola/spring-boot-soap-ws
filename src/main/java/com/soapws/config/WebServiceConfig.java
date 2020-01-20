@@ -8,8 +8,8 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.ws.config.annotation.EnableWs;
 import org.springframework.ws.transport.http.MessageDispatcherServlet;
 import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
-import org.springframework.xml.xsd.SimpleXsdSchema;
-import org.springframework.xml.xsd.XsdSchema;
+import org.springframework.xml.xsd.XsdSchemaCollection;
+import org.springframework.xml.xsd.commons.CommonsXsdSchemaCollection;
 
 @EnableWs
 @Configuration
@@ -23,18 +23,28 @@ public class WebServiceConfig {
         return new ServletRegistrationBean(messageDispatcherServlet, "/ws/*");
     }
 
-    @Bean(name = "students")
-    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema studentsSchema) {
+    @Bean(name = "soapService")
+    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchemaCollection schemaCollection) {
         DefaultWsdl11Definition definition = new DefaultWsdl11Definition();
-        definition.setPortTypeName("StudentPort");
-        definition.setTargetNamespace("http://soapws.com/students");
+        definition.setPortTypeName("soapServicePort");
+        //definition.setTargetNamespace("http://soapws.com/students");
         definition.setLocationUri("/ws");
-        definition.setSchema(studentsSchema);
+        //definition.setSchema(studentsSchema);
+        definition.setSchemaCollection(schemaCollection());
         return definition;
     }
 
-    @Bean
+   /* @Bean(name = "studentswsl")
     public XsdSchema studentsSchema() {
         return new SimpleXsdSchema(new ClassPathResource("student-details.xsd"));
+    }*/
+
+    @Bean
+    public XsdSchemaCollection schemaCollection() {
+        CommonsXsdSchemaCollection commonsXsdSchemaCollection = new CommonsXsdSchemaCollection(
+                new ClassPathResource("student-details.xsd"),
+                new ClassPathResource("countries.xsd"));
+        commonsXsdSchemaCollection.setInline(true);
+        return commonsXsdSchemaCollection;
     }
 }

@@ -5,5 +5,5 @@
 // Generated on: 2020.01.20 at 10:03:00 AM EST 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://soapws.com/students", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.soapws.students;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://soapws.com/countries", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package com.soapws.countries;

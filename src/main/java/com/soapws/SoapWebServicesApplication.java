@@ -9,7 +9,7 @@ public class SoapWebServicesApplication {
     public static void main(String[] args) {
         SpringApplication.run(SoapWebServicesApplication.class, args);
     }
-    //TODO: RUN this cmd to generate WSDL: mvn jaxb2:xjc
+    //TODO: RUN this cmd to generate WSDL: mvn jaxb2:xjc or mvn generate-sources or mvn compile
     //TODO TEST with : Install the chrome plugin Wizdler.
     //TODO: required jars
     /*

@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.students;
+package com.soapws.countries;
 
 import javax.xml.bind.annotation.*;
 
@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.*;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="StudentDetails" type="{http://soapws.com/students}StudentDetails"/>
+ *         &lt;element name="country" type="{http://soapws.com/countries}country"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,36 +30,32 @@ import javax.xml.bind.annotation.*;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-        "studentDetails"
+        "country"
 })
-@XmlRootElement(name = "GetStudentDetailsResponse")
-public class GetStudentDetailsResponse {
+@XmlRootElement(name = "getCountryResponse")
+public class GetCountryResponse {
 
-    @XmlElement(name = "StudentDetails", required = true)
-    protected StudentDetails studentDetails;
+    @XmlElement(required = true)
+    protected Country country;
 
     /**
-     * Gets the value of the studentDetails property.
+     * Gets the value of the country property.
      *
-     * @return
-     *     possible object is
-     *     {@link StudentDetails }
-     *
+     * @return possible object is
+     * {@link Country }
      */
-    public StudentDetails getStudentDetails() {
-        return studentDetails;
+    public Country getCountry() {
+        return country;
     }
 
     /**
-     * Sets the value of the studentDetails property.
+     * Sets the value of the country property.
      *
-     * @param value
-     *     allowed object is
-     *     {@link StudentDetails }
-     *
+     * @param value allowed object is
+     *              {@link Country }
      */
-    public void setStudentDetails(StudentDetails value) {
-        this.studentDetails = value;
+    public void setCountry(Country value) {
+        this.country = value;
     }
 
 }

@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.students;
+package com.soapws.countries;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each
  * Java content interface and Java element interface
- * generated in the com.soapws.students package.
+ * generated in the com.soapws.countries package.
  * <p>An ObjectFactory allows you to programatically
  * construct new instances of the Java representation
  * for XML content. The Java representation of XML
@@ -29,34 +29,30 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.soapws.students
-     *
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.soapws.countries
      */
     public ObjectFactory() {
     }
 
     /**
-     * Create an instance of {@link GetStudentDetailsResponse }
-     *
+     * Create an instance of {@link GetCountryRequest }
      */
-    public GetStudentDetailsResponse createGetStudentDetailsResponse() {
-        return new GetStudentDetailsResponse();
+    public GetCountryRequest createGetCountryRequest() {
+        return new GetCountryRequest();
     }
 
     /**
-     * Create an instance of {@link StudentDetails }
-     *
+     * Create an instance of {@link GetCountryResponse }
      */
-    public StudentDetails createStudentDetails() {
-        return new StudentDetails();
+    public GetCountryResponse createGetCountryResponse() {
+        return new GetCountryResponse();
     }
 
     /**
-     * Create an instance of {@link GetStudentDetailsRequest }
-     *
+     * Create an instance of {@link Country }
      */
-    public GetStudentDetailsRequest createGetStudentDetailsRequest() {
-        return new GetStudentDetailsRequest();
+    public Country createCountry() {
+        return new Country();
     }
 
 }

@@ -10,7 +10,6 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 @Endpoint
 public class StudentDetailsEndpoint {
-
     @PayloadRoot(namespace = "http://soapws.com/students", localPart = "GetStudentDetailsRequest")
     @ResponsePayload
     public GetStudentDetailsResponse processCourseDetailsRequest(@RequestPayload GetStudentDetailsRequest request) {
