@@ -11,6 +11,7 @@ public class SoapWebServicesApplication {
     }
     //TODO: RUN this cmd to generate WSDL: mvn jaxb2:xjc or mvn generate-sources or mvn compile
     //TODO TEST with : Install the chrome plugin Wizdler.
+    //TODO" mvn -X clean generate-sources or mvn -X clean install: clean resources
     //TODO: required jars
     /*
     compile('javax.xml.bind:jaxb-api:2.3.0')
